@@ -1,0 +1,13 @@
+C:\Projetos\Veiculo\bin\Debug\netcoreapp3.1\Veiculo.exe
+C:\Projetos\Veiculo\bin\Debug\netcoreapp3.1\Veiculo.deps.json
+C:\Projetos\Veiculo\bin\Debug\netcoreapp3.1\Veiculo.runtimeconfig.json
+C:\Projetos\Veiculo\bin\Debug\netcoreapp3.1\Veiculo.runtimeconfig.dev.json
+C:\Projetos\Veiculo\bin\Debug\netcoreapp3.1\Veiculo.dll
+C:\Projetos\Veiculo\bin\Debug\netcoreapp3.1\Veiculo.pdb
+C:\Projetos\Veiculo\obj\Debug\netcoreapp3.1\Veiculo.csprojAssemblyReference.cache
+C:\Projetos\Veiculo\obj\Debug\netcoreapp3.1\Veiculo.AssemblyInfoInputs.cache
+C:\Projetos\Veiculo\obj\Debug\netcoreapp3.1\Veiculo.AssemblyInfo.cs
+C:\Projetos\Veiculo\obj\Debug\netcoreapp3.1\Veiculo.csproj.CoreCompileInputs.cache
+C:\Projetos\Veiculo\obj\Debug\netcoreapp3.1\Veiculo.dll
+C:\Projetos\Veiculo\obj\Debug\netcoreapp3.1\Veiculo.pdb
+C:\Projetos\Veiculo\obj\Debug\netcoreapp3.1\Veiculo.genruntimeconfig.cache
