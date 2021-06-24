@@ -66,6 +66,35 @@ namespace Veiculo
                 $" * SOM ORIGINAL: {som.Original} - CAIXA SELADA: {som.CaixaSelada}";
         }
 
+        public string LigarCarro()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string DesligarCarro()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string DaSetaPraEsquerda()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string CavaloDePau()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AbrirPorta()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string FecharPorta()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

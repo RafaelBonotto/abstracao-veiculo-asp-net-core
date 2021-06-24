@@ -47,5 +47,35 @@
         {
             return $"RODA ARO: {this.roda.Aro}, RODTEM PNUE: {roda.Pneu} PORTA: {this.porta._4portas}";
         }
+
+        public string LigarCarro()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public string DesligarCarro()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public string DaSetaPraEsquerda()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public string CavaloDePau()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public string AbrirPorta()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public string FecharPorta()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
