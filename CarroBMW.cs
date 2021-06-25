@@ -1,81 +1,16 @@
 ﻿namespace Veiculo
 {
-    public class CarroBMW : IVeiculo
+    public class CarroBMW : VeiculoBase
     {
-        
-        public CarroBMW(Roda roda, Porta porta)
+        public CarroBMW(string modelo, string motor, Roda roda, Som som, Pintura pintura, Porta porta, Banco banco) :
+           base(modelo, motor, roda, som, pintura, porta, banco)
         {
             this.roda = roda;
+            this.som = som;
+            this.pintura = pintura;
             this.porta = porta;
+            this.banco = banco;
         }
-
-        private string Motor;
-
-        public string _modelo;
-        public Roda roda { get; set; }
-        public Porta porta { get; set; }
-        public Pintura pintura { get; set; }
-        public Banco banco { get; set; }
-        public Som som { get; set; }
-        public string Acelerar()
-        {
-            
-            return "  ";
-        }
-
-        public string Freiar()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string VirarParaDireita()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string VirarParaEsquerda()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string DaSetaPraDireita()
-        {
-            return "";
-        }
-
-        public override string ToString()
-        {
-            return $"RODA ARO: {this.roda.Aro}, RODTEM PNUE: {roda.Pneu} PORTA: {this.porta._4portas}";
-        }
-
-        public string LigarCarro()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string DesligarCarro()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string DaSetaPraEsquerda()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string CavaloDePau()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string AbrirPorta()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string FecharPorta()
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

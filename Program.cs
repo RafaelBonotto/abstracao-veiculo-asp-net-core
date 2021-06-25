@@ -6,31 +6,45 @@ namespace Veiculo
     {
         static void Main(string[] args)
         {
-            Roda novaRoda = new Roda(20, "TSW", true, new Pneu(40, "PIRELLI"));
+            Roda novaRoda = new Roda(20, "TSW",  new Pneu(40, "PIRELLI"));
 
             Porta novaPorta = new Porta(true);
 
-            Pintura novaPintura = new Pintura(true, "VERMELHO", false, true);
+            Pintura novaPintura = new Pintura("VERMELHO", false);
 
             Banco novoBanco = new Banco(true, "RECARO");
 
             Som novoSom = new Som(false);
 
-            CarroChevrolet novoCarro = new Opala("V6", novaRoda, novaPorta, novoSom, novoBanco, novaPintura);
+            var Opala = new CarroChevrolet("Opala", "6 CILINDRO", novaRoda, novoSom, novaPintura, novaPorta, novoBanco);
 
-            CarroBMW novoCarro2 = new Bmw320 (novaRoda, novaPorta);
+            Opala.FecharPorta();           
+            Opala.LigarVeiculo();
+            Opala.Acelerar(80);
+            //Opala.PagarMulta();
+            Opala.DesligarVeiculo();
+            //Opala.PagarMulta();
+            Opala.LigarVeiculo();
+            Opala.LigarSom();
 
-            var teste1 = novoCarro.ToString();
+            //Opala.AbrirPorta();
 
-            var teste = novoCarro2.ToString();
+            Console.WriteLine(Opala.ToString());
 
-            var teste2 = novoCarro.Acelerar();
-            var teste3 = novoCarro.Freiar();
+            var BMW = new CarroBMW("BMW 320i", "2.0", novaRoda, novoSom, novaPintura, novaPorta, novoBanco);
 
-            Console.WriteLine(teste1);
-            Console.WriteLine(teste2);
-            Console.WriteLine(teste3);
-            Console.WriteLine("TOSTRING() BMW: " + teste);
+            //BMW.FecharPorta();
+            BMW.LigarVeiculo();
+            BMW.LigarSom();
+            BMW.Acelerar(100);
+            //BMW.Acelerar(50);
+            //BMW.AbrirPorta();
+
+            Console.WriteLine(BMW.ToString());
+
+
         }
     }
 }
+
+

@@ -2,16 +2,14 @@
 {
     public class Roda
     {
-        public Roda(int aroParmetro, string modelo, bool pneu, Pneu _pneu)
+        public Roda(int aroParmetro, string modelo, Pneu pneu)
         {
             this.Aro = aroParmetro;
             this.Modelo = modelo;
-            this.Pneu = pneu;
-            this._Pneu = _pneu;
+            this.pneu = pneu;
         }
         public int Aro { get; set; }
         public string Modelo { get; set; }
-        public bool Pneu { get; set; }
-        public Pneu _Pneu { get; set; }
+        public Pneu pneu { get; set; }
     }
 }

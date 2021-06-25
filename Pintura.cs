@@ -2,14 +2,13 @@
 {
     public class Pintura
     {
-        public Pintura(bool personalizada, string cor, bool fosco, bool metalico)
+        public Pintura(string cor, bool fosco)
         {
-            this.Personalizada = personalizada;
             this.Cor = cor;
             this.Fosco = fosco;
-            this.Metalico = metalico;
+            if (Fosco) { this.Metalico = false; }
+            else { this.Metalico = true; }
         }
-        public bool Personalizada { get; set; }
         public string Cor { get; set; }
         public bool Fosco{ get; set; }
         public bool Metalico{ get; set; }
