@@ -56,50 +56,91 @@ namespace Veiculo
         {
             if (!veiculoLigado)
             {
-                estado = "NÃO FOI POSSÍVEL DESLIGAR O VEICULO! ELE JÁ ESTÁ DESLIGADO!";
+                estado = $" {estado} \n * NÃO FOI POSSÍVEL DESLIGAR O VEICULO! ELE JÁ ESTÁ DESLIGADO! ";
+                return;
+            }
+            if (velocidade > 0)
+            {
+                estado = $" {estado} \n * NÃO FOI POSSÍVEL DESLIGAR O VEICULO! É NECESSARIO FREIAR ANTES! ";
+                return;
             }
 
-            estado = $"VEICULO DESLIGADO ";
+            estado = $"{estado} \n * VEICULO DESLIGADO ";
             veiculoLigado = false;
         }
 
         public void LigarSom()
         {
+            if (somLigado)
+            {
+                estado = $"{estado}\n * NÃO FOI POSSIVEL LIGAR O SOM! VERIFIQUE SE ELE JÁ ESTÁ LIGADO!";
+                return;
+            }
             somLigado = true;
             estado = $"{estado}\n * SOM LIGADO: True"; 
         }
 
         public void DesligarSom()
         {
+            if (!somLigado)
+            {
+                estado = $"{estado}\n * NÃO FOI POSSIVEL DESLIGAR O SOM! VERIFIQUE SE ELE JÁ ESTÁ DESLIGADO!";
+                return;
+            }
             somLigado = false;
             estado = $"{estado}\n * SOM LIGADO: False";
         }
 
         public void FecharPorta()
         {
+            if (!portaAberta)
+            {
+                estado = $"{estado}\n * NÃO FOI POSSIVEL FECHAR A PORTA! VERIFIQUE SE ELA JÁ ESTÁ FECHADA!";
+                return;
+            }
             portaAberta = false;
-            estado = $"{estado}\n *PORTA ABERTA: False";
+            estado = $"{estado}\n * PORTA ABERTA: False";
 
         }
 
         public void AbrirPorta()
         {
+            if (portaAberta)
+            {
+                estado = $"{estado}\n * NÃO FOI POSSIVEL ABRIR A PORTA! VERIFIQUE SE ELA JÁ ESTÁ ABERTA!";
+                return;
+            }
+            if(velocidade > 0)
+            {
+                estado = $"{estado}\n * NÃO É POSSIVEL ABRIR A PORTA COM VEICULO EM MOVIMENTO! PARE O CARRO PRIMEIRO!!";
+                return;
+            }
             portaAberta = true;
             estado = $"{estado}\n * PORTA ABERTA: True";
 
         }
         public void Acelerar(int velocidade)
-        {            
+        {
+            if (!veiculoLigado)
+            {
+                estado = $"{estado}\n * NÃO É POSSIVEL ACELERAR O VEICULO DESLIGADO!";
+                return;
+            }
             this.velocidade += velocidade;
             estado = $"{estado}\n * VELOCIDADE: {this.velocidade}";
 
             if (this.velocidade > 50) multa = true; 
         }
 
-        public void Freiar()
+        public virtual void Freiar()
         {
+            if (velocidade <= 0)
+            {
+                estado = $"{estado}\n * NÃO É POSSIVEL FREIAR O VEICULO ELE JÁ ESTÁ PARADO!";
+                return;
+            }
             velocidade = 0;
-            estado = $"{estado}\n * VELOCIDADE: {velocidade}";
+            estado = $"{estado}\n * VELOCIDADE: {velocidade}\n * VEICULO PARADO!";
         }
 
         public void PagarMulta()

@@ -12,5 +12,13 @@
             this.banco = banco;
         }
         
+        public override void Freiar()
+        {
+            base.Freiar();
+
+
+
+
+        }
     }
 }
